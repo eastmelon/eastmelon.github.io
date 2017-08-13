@@ -1,0 +1,28 @@
+.profilepic{
+    display: block;
+    border: 5px solid #fff;
+    border-radius: 300px;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: #88acdb;
+    -webkit-transition: all .2s ease-in;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    text-align: center;
+}
+.container{
+    width:690px;
+    margin:0 auto;
+}
+.works{
+    text-align: center;
+}
+.message-box{
+    width: 280px;
+    margin: 0 auto;
+}
