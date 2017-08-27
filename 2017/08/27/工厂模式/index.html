@@ -6,14 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>永痕的精神，未竟的事业</title>
+  <title>&#39;工厂模式&#39; | 永痕的精神，未竟的事业</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="永痕的精神，未竟的事业">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一开始有点不理解工厂模式的作用，现在想来，从代码的解耦性，对象的管理上考虑，工厂模式确实很有用。比如有个a对象在很多地方都采用采用A a=new A()的方式实例化，那么，如果实例化的方式有所改变，就需要在每个地方都做修改。而使用工厂模式，只需要在获得工厂实例的地方修改即可。下面来说说工厂模式的几种方式： 1.普通工厂模式就是建立一个工厂类，对实现了同一接口的一些类进行实例的创建。首先看下关系图：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#39;工厂模式&#39;">
+<meta property="og:url" content="http://yoursite.com/2017/08/27/工厂模式/index.html">
 <meta property="og:site_name" content="永痕的精神，未竟的事业">
+<meta property="og:description" content="一开始有点不理解工厂模式的作用，现在想来，从代码的解耦性，对象的管理上考虑，工厂模式确实很有用。比如有个a对象在很多地方都采用采用A a=new A()的方式实例化，那么，如果实例化的方式有所改变，就需要在每个地方都做修改。而使用工厂模式，只需要在获得工厂实例的地方修改即可。下面来说说工厂模式的几种方式： 1.普通工厂模式就是建立一个工厂类，对实现了同一接口的一些类进行实例的创建。首先看下关系图：">
+<meta property="og:image" content="http://dl.iteye.com/upload/attachment/0083/1180/421a1a3f-6777-3bca-85d7-00fc60c1ae8b.png?_=3023236">
+<meta property="og:image" content="http://dl.iteye.com/upload/attachment/0083/1181/84673ccf-ef89-3774-b5cf-6d2523cd03e5.jpg?_=3023236">
+<meta property="og:image" content="http://dl.iteye.com/upload/attachment/0083/1185/34a0f8de-16e0-3cd5-9f69-257fcb2be742.jpg?_=3023236">
+<meta property="og:updated_time" content="2017-08-27T16:11:32.090Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="永痕的精神，未竟的事业">
+<meta name="twitter:title" content="&#39;工厂模式&#39;">
+<meta name="twitter:description" content="一开始有点不理解工厂模式的作用，现在想来，从代码的解耦性，对象的管理上考虑，工厂模式确实很有用。比如有个a对象在很多地方都采用采用A a=new A()的方式实例化，那么，如果实例化的方式有所改变，就需要在每个地方都做修改。而使用工厂模式，只需要在获得工厂实例的地方修改即可。下面来说说工厂模式的几种方式： 1.普通工厂模式就是建立一个工厂类，对实现了同一接口的一些类进行实例的创建。首先看下关系图：">
+<meta name="twitter:image" content="http://dl.iteye.com/upload/attachment/0083/1180/421a1a3f-6777-3bca-85d7-00fc60c1ae8b.png?_=3023236">
   
     <link rel="alternative" href="/atom.xml" title="永痕的精神，未竟的事业" type="application/atom+xml">
   
@@ -155,16 +163,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-工厂模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-工厂模式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/27/工厂模式/">&#39;工厂模式&#39;</a>
+    <h1 class="article-title" itemprop="name">
+      &#39;工厂模式&#39;
     </h1>
   
 
@@ -196,6 +202,37 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://wx1.sinaimg.cn/mw690/00677IHhly1fhhd94t407j307u07r74z.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://wx2.sinaimg.cn/mw690/00677IHhly1fhhdjb7nggj304l04maaf.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -203,16 +240,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/27/工厂模式/">more >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/27/工厂模式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/24/单例模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">单例模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -232,590 +328,23 @@
 
 
 
-
-
-  
-    <article id="post-单例模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/24/单例模式/">单例模式</a>
-    </h1>
   
 
-        
-        <a href="/2017/08/24/单例模式/" class="archive-article-date">
-  	<time datetime="2017-08-24T13:45:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-24</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>引用博客：<a href="http://www.cnblogs.com/maowang1991/archive/2013/04/15/3023236.html" target="_blank" rel="external">http://www.cnblogs.com/maowang1991/archive/2013/04/15/3023236.html</a><br>在javay应用当中，单例对象能保证在一个JVM中，该对象只有一个实例存在。这样的模式有以下几个好处</p>
-<ul>
-<li>对于某些频繁创建的大型对象，可以省下开销。</li>
-<li>省去了new操作符，降低了系统内存的使用频率，减轻GC压力。</li>
-<li>有些如交易所的核心交易引擎，控制着交易流程，如果该类可以创建多个的话，系统就完全乱了，所以只有使用单例模式，才能保证交易服务器独立控制流程。</li>
-</ul>
-<h3 id="1-普通的单例模式"><a href="#1-普通的单例模式" class="headerlink" title="1.普通的单例模式"></a>1.普通的单例模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public class CommonSingleton &#123;</div><div class="line">	private static CommonSingleton instance=null;</div><div class="line">	//防止通过构造函数初始化</div><div class="line">	private CommonSingleton()&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public static CommonSingleton getInstance()&#123;</div><div class="line">		if(instance==null)&#123;</div><div class="line">			instance=new CommonSingleton();</div><div class="line">		&#125;</div><div class="line">		return instance;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="2-基于synchronized关键字的单例模式"><a href="#2-基于synchronized关键字的单例模式" class="headerlink" title="2.基于synchronized关键字的单例模式"></a>2.基于synchronized关键字的单例模式</h3><p>防止在第一次初始化对象的时候产生的多线程的问题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public static synchronized Singleton getInstance() &#123;  </div><div class="line">        if (instance == null) &#123;  </div><div class="line">            instance = new Singleton();  </div><div class="line">        &#125;  </div><div class="line">        return instance;  </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>这样的写法会在每次调用getInstance()方法的时候对方法加锁。从而影响性能。优化方法如下，采用同步快的方式，保证线程安全。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public static Singleton getInstance() &#123;  </div><div class="line">        if (instance == null) &#123;  </div><div class="line">       //只有在创建实例的时候对对象加锁。</div><div class="line">            synchronized (instance) &#123;  </div><div class="line">                if (instance == null) &#123;  </div><div class="line">                    instance = new Singleton();  </div><div class="line">                &#125;  </div><div class="line">            &#125;  </div><div class="line">        &#125;  </div><div class="line">        return instance;  </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>这样的情况，还是有可能有问题的，看下面的情况：在Java指令中创建对象和赋值操作是分开进行的，也就是说instance = new Singleton();语句是分两步执行的。但是JVM并不保证这两个操作的先后顺序，也就是说有可能JVM会为新的Singleton实例分配空间，然后直接赋值给instance成员，然后再去初始化这个Singleton实例。这样就可能出错了，我们以A、B两个线程为例：<br>a&gt;A、B线程同时进入了第一个if判断<br>b&gt;A首先进入synchronized块，由于instance为null，所以它执行instance = new Singleton();<br>c&gt;由于JVM内部的优化机制，JVM先画出了一些分配给Singleton实例的空白内存，并赋值给instance成员（注意此时JVM没有开始初始化这个实例），然后A离开了synchronized块。<br>d&gt;B进入synchronized块，由于instance此时不是null，因此它马上离开了synchronized块并将结果返回给调用该方法的程序。<br>e&gt;此时B线程打算使用Singleton实例，却发现它没有被初始化，于是错误发生了。</p>
-<h3 id="3-基于内部类的单例模式，来控制线程同步，来解决上述的问题"><a href="#3-基于内部类的单例模式，来控制线程同步，来解决上述的问题" class="headerlink" title="3.基于内部类的单例模式，来控制线程同步，来解决上述的问题"></a>3.基于内部类的单例模式，来控制线程同步，来解决上述的问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public class ClassSingleton &#123;</div><div class="line">	private ClassSingleton()&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	//通过内部类来维护单例</div><div class="line">	private static class SingletonFactory&#123;</div><div class="line">		private static ClassSingleton classSingleton=new ClassSingleton();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public static ClassSingleton getInstance()&#123;</div><div class="line">		return SingletonFactory.classSingleton;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这种方式可以避免类在实例化当中的问题。</p>
-<h3 id="4-单例模式在spring中的实现"><a href="#4-单例模式在spring中的实现" class="headerlink" title="4.单例模式在spring中的实现"></a>4.单例模式在spring中的实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line">public abstract class AbstractBeanFactory implements ConfigurableBeanFactory&#123;    </div><div class="line">   /**  </div><div class="line">    * 充当了Bean实例的缓存，实现方式和单例注册表相同  </div><div class="line">    */    </div><div class="line">   private final Map singletonCache=new HashMap();    </div><div class="line">   public Object getBean(String name)throws BeansException&#123;    </div><div class="line">       return getBean(name,null,null);    </div><div class="line">   &#125;    </div><div class="line">...    </div><div class="line">   public Object getBean(String name,Class requiredType,Object[] args)throws BeansException&#123;    </div><div class="line">      //对传入的Bean name稍做处理，防止传入的Bean name名有非法字符(或则做转码)    </div><div class="line">      String beanName=transformedBeanName(name);    </div><div class="line">      Object bean=null;    </div><div class="line">      //手工检测单例注册表    </div><div class="line">      Object sharedInstance=null;    </div><div class="line">      //使用了代码锁定同步块，原理和同步方法相似，但是这种写法效率更高    </div><div class="line">      synchronized(this.singletonCache)&#123;    </div><div class="line">         sharedInstance=this.singletonCache.get(beanName);    </div><div class="line">       &#125;    </div><div class="line">      if(sharedInstance!=null)&#123;    </div><div class="line">         ...    </div><div class="line">         //返回合适的缓存Bean实例    </div><div class="line">         bean=getObjectForSharedInstance(name,sharedInstance);    </div><div class="line">      &#125;else&#123;    </div><div class="line">        ...    </div><div class="line">        //取得Bean的定义    </div><div class="line">        RootBeanDefinition mergedBeanDefinition=getMergedBeanDefinition(beanName,false);    </div><div class="line">         ...    </div><div class="line">        //根据Bean定义判断，此判断依据通常来自于组件配置文件的单例属性开关    </div><div class="line">        //&lt;bean id=&quot;date&quot; class=&quot;java.util.Date&quot; scope=&quot;singleton&quot;/&gt;    </div><div class="line">        //如果是单例，做如下处理    </div><div class="line">        if(mergedBeanDefinition.isSingleton())&#123;    </div><div class="line">           synchronized(this.singletonCache)&#123;    </div><div class="line">            //再次检测单例注册表    </div><div class="line">             sharedInstance=this.singletonCache.get(beanName);    </div><div class="line">             if(sharedInstance==null)&#123;    </div><div class="line">                ...    </div><div class="line">               try &#123;    </div><div class="line">                  //真正创建Bean实例    </div><div class="line">                  sharedInstance=createBean(beanName,mergedBeanDefinition,args);    </div><div class="line">                  //向单例注册表注册Bean实例    </div><div class="line">                   addSingleton(beanName,sharedInstance);    </div><div class="line">               &#125;catch (Exception ex) &#123;    </div><div class="line">                  ...    </div><div class="line">               &#125;finally&#123;    </div><div class="line">                  ...    </div><div class="line">              &#125;    </div><div class="line">             &#125;    </div><div class="line">           &#125;    </div><div class="line">          bean=getObjectForSharedInstance(name,sharedInstance);    </div><div class="line">        &#125;    </div><div class="line">       //如果是非单例，即prototpye，每次都要新创建一个Bean实例    </div><div class="line">       //&lt;bean id=&quot;date&quot; class=&quot;java.util.Date&quot; scope=&quot;prototype&quot;/&gt;    </div><div class="line">       else&#123;    </div><div class="line">          bean=createBean(beanName,mergedBeanDefinition,args);    </div><div class="line">       &#125;    </div><div class="line">&#125;    </div><div class="line">...    </div><div class="line">   return bean;    </div><div class="line">&#125;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/08/24/单例模式/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/24/单例模式/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-JAVA面试宝典" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/13/JAVA面试宝典/">JAVA面试宝典</a>
-    </h1>
   
 
-        
-        <a href="/2017/08/13/JAVA面试宝典/" class="archive-article-date">
-  	<time datetime="2017-08-13T08:01:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-13</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、Java基础部分"><a href="#一、Java基础部分" class="headerlink" title="一、Java基础部分"></a>一、Java基础部分</h2><h3 id="1-一个“-java”源文件是否可以包括多个类（不是内部类）？有什么限制？"><a href="#1-一个“-java”源文件是否可以包括多个类（不是内部类）？有什么限制？" class="headerlink" title="1.一个“.java”源文件是否可以包括多个类（不是内部类）？有什么限制？"></a>1.一个“.java”源文件是否可以包括多个类（不是内部类）？有什么限制？</h3><p>可以有多个Class,但是只能有一个public的类，并且public的类名必须与文件名相一致。</p>
-<h3 id="2-java有没有goto"><a href="#2-java有没有goto" class="headerlink" title="2.java有没有goto"></a>2.java有没有goto</h3><p>java 中的保留字</p>
-<h3 id="3-amp-和-amp-amp-的区别"><a href="#3-amp-和-amp-amp-的区别" class="headerlink" title="3.&amp;和&amp;&amp;的区别"></a>3.&amp;和&amp;&amp;的区别</h3>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/13/JAVA面试宝典/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
   
-    <article id="post-SpringBoot配置文件详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/30/SpringBoot配置文件详解/">SpringBoot配置文件详解</a>
-    </h1>
+  <div id="SOHUCS" sid="工厂模式" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "cyt7fRDGE"; 
+var conf = "49846d37a3822018352929a8b52ea14e"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
   
 
-        
-        <a href="/2017/07/30/SpringBoot配置文件详解/" class="archive-article-date">
-  	<time datetime="2017-07-30T07:10:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-30</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="CORE-PROPERTIES"><a href="#CORE-PROPERTIES" class="headerlink" title="CORE PROPERTIES"></a>CORE PROPERTIES</h1><h2 id="BANNER"><a href="#BANNER" class="headerlink" title="BANNER"></a>BANNER</h2><p>banner.charset=UTF-8 # Banner file encoding.<br>banner.location=classpath:banner.txt # Banner file location.<br>banner.image.location=classpath:banner.gif # Banner image file location (jpg/png can also be used).<br>banner.image.width= # Width of the banner image in chars (default 76)<br>banner.image.height= # Height of the banner image in chars (default based on image height)<br>banner.image.margin= # Left hand image margin in chars (default 2)<br>banner.image.invert= # If images should be inverted for dark terminal themes (default false)</p>
-<h2 id="LOGGING"><a href="#LOGGING" class="headerlink" title="LOGGING"></a>LOGGING</h2><p>logging.config= # Location of the logging configuration file. For instance <code>classpath:logback.xml</code> for Logback<br>logging.exception-conversion-word=%wEx # Conversion word used when logging exceptions.<br>logging.file= # Log file name. For instance <code>myapp.log</code><br>logging.level.*= # Log levels severity mapping. For instance <code>logging.level.org.springframework=DEBUG</code><br>logging.path= # Location of the log file. For instance <code>/var/log</code><br>logging.pattern.console= # Appender pattern for output to the console. Only supported with the default logback setup.<br>logging.pattern.file= # Appender pattern for output to the file. Only supported with the default logback setup.<br>logging.pattern.level= # Appender pattern for log level (default %5p). Only supported with the default logback setup.<br>logging.register-shutdown-hook=false # Register a shutdown hook for the logging system when it is initialized.</p>
-<h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><p>spring.aop.auto=true # Add @EnableAspectJAutoProxy.<br>spring.aop.proxy-target-class=false # Whether subclass-based (CGLIB) proxies are to be created (true) as opposed to standard Java interface-based proxies (false).</p>
-<h2 id="IDENTITY"><a href="#IDENTITY" class="headerlink" title="IDENTITY"></a>IDENTITY</h2><p>spring.application.index= # Application index.<br>spring.application.name= # Application name.</p>
-<h2 id="ADMIN"><a href="#ADMIN" class="headerlink" title="ADMIN"></a>ADMIN</h2><p>spring.application.admin.enabled=false # Enable admin features for the application.<br>spring.application.admin.jmx-name=org.springframework.boot:type=Admin,name=SpringApplication # JMX name of the application admin MBean.</p>
-<h2 id="AUTO-CONFIGURATION"><a href="#AUTO-CONFIGURATION" class="headerlink" title="AUTO-CONFIGURATION"></a>AUTO-CONFIGURATION</h2><p>spring.autoconfigure.exclude= # Auto-configuration classes to exclude.</p>
-<h2 id="SPRING-CORE"><a href="#SPRING-CORE" class="headerlink" title="SPRING CORE"></a>SPRING CORE</h2><p>spring.beaninfo.ignore=true # Skip search of BeanInfo classes.</p>
-<h2 id="SPRING-CACHE"><a href="#SPRING-CACHE" class="headerlink" title="SPRING CACHE"></a>SPRING CACHE</h2><p>spring.cache.cache-names= # Comma-separated list of cache names to create if supported by the underlying cache manager.<br>spring.cache.caffeine.spec= # The spec to use to create caches. Check CaffeineSpec for more details on the spec format.<br>spring.cache.couchbase.expiration=0 # Entry expiration in milliseconds. By default the entries never expire.<br>spring.cache.ehcache.config= # The location of the configuration file to use to initialize EhCache.<br>spring.cache.guava.spec= # The spec to use to create caches. Check CacheBuilderSpec for more details on the spec format.<br>spring.cache.infinispan.config= # The location of the configuration file to use to initialize Infinispan.<br>spring.cache.jcache.config= # The location of the configuration file to use to initialize the cache manager.<br>spring.cache.jcache.provider= # Fully qualified name of the CachingProvider implementation to use to retrieve the JSR-107 compliant cache manager. Only needed if more than one JSR-107 implementation is available on the classpath.<br>spring.cache.type= # Cache type, auto-detected according to the environment by default.</p>
-<h2 id="SPRING-CONFIG-using-environment-property-only"><a href="#SPRING-CONFIG-using-environment-property-only" class="headerlink" title="SPRING CONFIG - using environment property only"></a>SPRING CONFIG - using environment property only</h2><p>spring.config.location= # Config file locations.<br>spring.config.name=application # Config file name.</p>
-<h2 id="HAZELCAST"><a href="#HAZELCAST" class="headerlink" title="HAZELCAST"></a>HAZELCAST</h2><p>spring.hazelcast.config= # The location of the configuration file to use to initialize Hazelcast.</p>
-<h2 id="PROJECT-INFORMATION"><a href="#PROJECT-INFORMATION" class="headerlink" title="PROJECT INFORMATION"></a>PROJECT INFORMATION</h2><p>spring.info.build.location=classpath:META-INF/build-info.properties # Location of the generated build-info.properties file.<br>spring.info.git.location=classpath:git.properties # Location of the generated git.properties file.</p>
-<h2 id="JMX"><a href="#JMX" class="headerlink" title="JMX"></a>JMX</h2><p>spring.jmx.default-domain= # JMX domain name.<br>spring.jmx.enabled=true # Expose management beans to the JMX domain.<br>spring.jmx.server=mbeanServer # MBeanServer bean name.<br>
-        
-          <a class="article-more-a" href="/2017/07/30/SpringBoot配置文件详解/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/30/SpringBoot配置文件详解/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-install-redis-on-linux" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/20/install-redis-on-linux/">install redis on linux</a>
-    </h1>
   
 
-        
-        <a href="/2017/07/20/install-redis-on-linux/" class="archive-article-date">
-  	<time datetime="2017-07-20T14:20:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-download-redis"><a href="#1-download-redis" class="headerlink" title="1.download redis"></a>1.download redis</h4><p><a href="https://redis.io/" target="_blank" rel="external">https://redis.io/</a></p>
-<h4 id="2-tar-and-make-it"><a href="#2-tar-and-make-it" class="headerlink" title="2.tar and make it"></a>2.tar and make it</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">root@localhost  tar xzf redis-4.0.0.tar.gz</div><div class="line">root@localhost  cd redis-4.0.0</div><div class="line">root@localhost  make</div><div class="line">root@localhost  make install</div></pre></td></tr></table></figure>
-<p>to see process of redis</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">root@localhost  ps -ef|grep redis</div></pre></td></tr></table></figure>
-<h4 id="3-redis-test"><a href="#3-redis-test" class="headerlink" title="3.redis test"></a>3.redis test</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@localhost bin]# redis-cli</div><div class="line">127.0.0.1:6379&gt; flushdb --clear</div><div class="line">OK</div><div class="line">127.0.0.1:6379&gt; set testkey 2</div><div class="line">OK</div><div class="line">127.0.0.1:6379&gt; get testkey</div><div class="line">&quot;2&quot;</div></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/20/install-redis-on-linux/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-linux下开启端口" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/19/linux下开启端口/">linux下开启端口</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/19/linux下开启端口/" class="archive-article-date">
-  	<time datetime="2017-07-18T17:27:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-19</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-查看iptables"><a href="#1-查看iptables" class="headerlink" title="1.查看iptables"></a>1.查看iptables</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -nL</div></pre></td></tr></table></figure>
-<h4 id="2-将21端口插入到input的ACCEPT中"><a href="#2-将21端口插入到input的ACCEPT中" class="headerlink" title="2. 将21端口插入到input的ACCEPT中"></a>2. 将21端口插入到input的ACCEPT中</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -I INPUT 5 -p tcp --dport 21 -j ACCEPT</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/19/linux下开启端口/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-20170712" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/12/20170712/">20170712</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/12/20170712/" class="archive-article-date">
-  	<time datetime="2017-07-12T14:37:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我们一来到世间，社会就在我们面前树起了一个巨大的问号：你怎样度过自己的一生。 —— 爱因斯坦</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/12/20170712/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-what-is-the-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/10/what-is-the-world/">what is the world?</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/10/what-is-the-world/" class="archive-article-date">
-  	<time datetime="2017-07-10T13:23:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-10</time>
-</a>
-        
-      </header>
-    
-    <!-- 目录内容 -->
-    
-    <!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="宇宙便是吾心，吾心便是宇宙"><a href="#宇宙便是吾心，吾心便是宇宙" class="headerlink" title="宇宙便是吾心，吾心便是宇宙"></a>宇宙便是吾心，吾心便是宇宙</h2><p>世界究竟是什么？世界由什么组成？人类究竟作为怎么样的存在立足与这个世界？</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">世界学说</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/10/what-is-the-world/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -837,8 +366,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
