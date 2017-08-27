@@ -184,9 +184,9 @@
 <ul>
 <li>对于某些频繁创建的大型对象，可以省下开销。</li>
 <li>省去了new操作符，降低了系统内存的使用频率，减轻GC压力。</li>
-<li>有些如交易所的核心交易引擎，控制着交易流程，如果该类可以创建多个的话，系统就完全乱了，所以只有使用单例模式，才能保证交易服务器独立控制流程。<h3 id="1-普通的单例模式"><a href="#1-普通的单例模式" class="headerlink" title="1.普通的单例模式"></a>1.普通的单例模式</h3></li>
+<li>有些如交易所的核心交易引擎，控制着交易流程，如果该类可以创建多个的话，系统就完全乱了，所以只有使用单例模式，才能保证交易服务器独立控制流程。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public class CommonSingleton &#123;</div><div class="line">	private static CommonSingleton instance=null;</div><div class="line">	</div><div class="line">	private CommonSingleton()&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public static CommonSingleton getInstance()&#123;</div><div class="line">		if(instance==null)&#123;</div><div class="line">			instance=new CommonSingleton();</div><div class="line">		&#125;</div><div class="line">		return instance;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="1-普通的单例模式"><a href="#1-普通的单例模式" class="headerlink" title="1.普通的单例模式"></a>1.普通的单例模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">public class CommonSingleton &#123;</div><div class="line">	private static CommonSingleton instance=null;</div><div class="line">	</div><div class="line">	private CommonSingleton()&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public static CommonSingleton getInstance()&#123;</div><div class="line">		if(instance==null)&#123;</div><div class="line">			instance=new CommonSingleton();</div><div class="line">		&#125;</div><div class="line">		return instance;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="2-基于synchronized关键字的单例模式"><a href="#2-基于synchronized关键字的单例模式" class="headerlink" title="2.基于synchronized关键字的单例模式"></a>2.基于synchronized关键字的单例模式</h3><p>防止在第一次初始化对象的时候产生的多线程的问题。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public static synchronized Singleton getInstance() &#123;  </div><div class="line">        if (instance == null) &#123;  </div><div class="line">            instance = new Singleton();  </div><div class="line">        &#125;  </div><div class="line">        return instance;  </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>这样的写法会在每次调用getInstance()方法的时候对方法加锁。从而影响性能。优化方法如下，采用同步快的方式，保证线程安全。</p>
@@ -835,11 +835,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">生活记录</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color5">生活记录</a>
               </li>
              
               <li class="article-tag-list-item">
