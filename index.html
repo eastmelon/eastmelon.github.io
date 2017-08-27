@@ -157,19 +157,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-设计模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-单例模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/24/设计模式/">&#39;单例模式&#39;</a>
+      <a class="article-title" href="/2017/08/24/单例模式/">&#39;单例模式&#39;</a>
     </h1>
   
 
         
-        <a href="/2017/08/24/设计模式/" class="archive-article-date">
+        <a href="/2017/08/24/单例模式/" class="archive-article-date">
   	<time datetime="2017-08-24T13:45:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-24</time>
 </a>
         
@@ -202,7 +202,7 @@
 <p>这种方式可以避免类在实例化当中的问题，在多线程下，</p>
 <h3 id="4-单例模式在spring中的实现"><a href="#4-单例模式在spring中的实现" class="headerlink" title="4.单例模式在spring中的实现"></a>4.单例模式在spring中的实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line">public abstract class AbstractBeanFactory implements ConfigurableBeanFactory&#123;    </div><div class="line">   /**  </div><div class="line">    * 充当了Bean实例的缓存，实现方式和单例注册表相同  </div><div class="line">    */    </div><div class="line">   private final Map singletonCache=new HashMap();    </div><div class="line">   public Object getBean(String name)throws BeansException&#123;    </div><div class="line">       return getBean(name,null,null);    </div><div class="line">   &#125;    </div><div class="line">...    </div><div class="line">   public Object getBean(String name,Class requiredType,Object[] args)throws BeansException&#123;    </div><div class="line">      //对传入的Bean name稍做处理，防止传入的Bean name名有非法字符(或则做转码)    </div><div class="line">      String beanName=transformedBeanName(name);    </div><div class="line">      Object bean=null;    </div><div class="line">      //手工检测单例注册表    </div><div class="line">      Object sharedInstance=null;    </div><div class="line">      //使用了代码锁定同步块，原理和同步方法相似，但是这种写法效率更高    </div><div class="line">      synchronized(this.singletonCache)&#123;    </div><div class="line">         sharedInstance=this.singletonCache.get(beanName);    </div><div class="line">       &#125;    </div><div class="line">      if(sharedInstance!=null)&#123;    </div><div class="line">         ...    </div><div class="line">         //返回合适的缓存Bean实例    </div><div class="line">         bean=getObjectForSharedInstance(name,sharedInstance);    </div><div class="line">      &#125;else&#123;    </div><div class="line">        ...    </div><div class="line">        //取得Bean的定义    </div><div class="line">        RootBeanDefinition mergedBeanDefinition=getMergedBeanDefinition(beanName,false);    </div><div class="line">         ...    </div><div class="line">        //根据Bean定义判断，此判断依据通常来自于组件配置文件的单例属性开关    </div><div class="line">        //&lt;bean id=&quot;date&quot; class=&quot;java.util.Date&quot; scope=&quot;singleton&quot;/&gt;    </div><div class="line">        //如果是单例，做如下处理    </div><div class="line">        if(mergedBeanDefinition.isSingleton())&#123;    </div><div class="line">           synchronized(this.singletonCache)&#123;    </div><div class="line">            //再次检测单例注册表    </div><div class="line">             sharedInstance=this.singletonCache.get(beanName);    </div><div class="line">             if(sharedInstance==null)&#123;    </div><div class="line">                ...    </div><div class="line">               try &#123;    </div><div class="line">                  //真正创建Bean实例    </div><div class="line">                  sharedInstance=createBean(beanName,mergedBeanDefinition,args);    </div><div class="line">                  //向单例注册表注册Bean实例    </div><div class="line">                   addSingleton(beanName,sharedInstance);    </div><div class="line">               &#125;catch (Exception ex) &#123;    </div><div class="line">                  ...    </div><div class="line">               &#125;finally&#123;    </div><div class="line">                  ...    </div><div class="line">              &#125;    </div><div class="line">             &#125;    </div><div class="line">           &#125;    </div><div class="line">          bean=getObjectForSharedInstance(name,sharedInstance);    </div><div class="line">        &#125;    </div><div class="line">       //如果是非单例，即prototpye，每次都要新创建一个Bean实例    </div><div class="line">       //&lt;bean id=&quot;date&quot; class=&quot;java.util.Date&quot; scope=&quot;prototype&quot;/&gt;    </div><div class="line">       else&#123;    </div><div class="line">          bean=createBean(beanName,mergedBeanDefinition,args);    </div><div class="line">       &#125;    </div><div class="line">&#125;    </div><div class="line">...    </div><div class="line">   return bean;    </div><div class="line">&#125;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2017/08/24/设计模式/#more">more >></a>
+          <a class="article-more-a" href="/2017/08/24/单例模式/#more">more >></a>
         
       
 
@@ -226,7 +226,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/24/设计模式/">more >></a>
+          <a class="article-more-a" href="/2017/08/24/单例模式/">more >></a>
         </p>
       
 
@@ -848,7 +848,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -856,7 +856,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
