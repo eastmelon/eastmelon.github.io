@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JAVA面试宝典 | 永痕的精神，未竟的事业</title>
+  <title>redis配置 | 永痕的精神，未竟的事业</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、Java基础部分1.一个“.java”源文件是否可以包括多个类（不是内部类）？有什么限制？可以有多个Class,但是只能有一个public的类，并且public的类名必须与文件名相一致。 2.java有没有gotojava 中的保留字 3.&amp;amp;和&amp;amp;&amp;amp;的区别">
-<meta name="keywords" content="java">
+  <meta name="description" content="Redis 的配置文件位于 Redis 安装目录下，文件名为 redis.conf。你可以通过 CONFIG 命令查看或设置配置项。redis.conf 配置项说明如下： 123CONFIG GET *  //获取所有配置CONFIG GET loglevel  //获取制定配置CONFIG SET loglevel &amp;quot;notice&amp;quot;  //更改配置的值 当然，也可以直接到re">
+<meta name="keywords" content="redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA面试宝典">
-<meta property="og:url" content="http://yoursite.com/2017/08/13/JAVA面试宝典/index.html">
+<meta property="og:title" content="redis配置">
+<meta property="og:url" content="http://yoursite.com/2017/09/06/redis配置/index.html">
 <meta property="og:site_name" content="永痕的精神，未竟的事业">
-<meta property="og:description" content="一、Java基础部分1.一个“.java”源文件是否可以包括多个类（不是内部类）？有什么限制？可以有多个Class,但是只能有一个public的类，并且public的类名必须与文件名相一致。 2.java有没有gotojava 中的保留字 3.&amp;amp;和&amp;amp;&amp;amp;的区别">
-<meta property="og:updated_time" content="2017-08-13T15:46:10.899Z">
+<meta property="og:description" content="Redis 的配置文件位于 Redis 安装目录下，文件名为 redis.conf。你可以通过 CONFIG 命令查看或设置配置项。redis.conf 配置项说明如下： 123CONFIG GET *  //获取所有配置CONFIG GET loglevel  //获取制定配置CONFIG SET loglevel &amp;quot;notice&amp;quot;  //更改配置的值 当然，也可以直接到re">
+<meta property="og:updated_time" content="2017-09-06T02:24:28.686Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JAVA面试宝典">
-<meta name="twitter:description" content="一、Java基础部分1.一个“.java”源文件是否可以包括多个类（不是内部类）？有什么限制？可以有多个Class,但是只能有一个public的类，并且public的类名必须与文件名相一致。 2.java有没有gotojava 中的保留字 3.&amp;amp;和&amp;amp;&amp;amp;的区别">
+<meta name="twitter:title" content="redis配置">
+<meta name="twitter:description" content="Redis 的配置文件位于 Redis 安装目录下，文件名为 redis.conf。你可以通过 CONFIG 命令查看或设置配置项。redis.conf 配置项说明如下： 123CONFIG GET *  //获取所有配置CONFIG GET loglevel  //获取制定配置CONFIG SET loglevel &amp;quot;notice&amp;quot;  //更改配置的值 当然，也可以直接到re">
   
     <link rel="alternative" href="/atom.xml" title="永痕的精神，未竟的事业" type="application/atom+xml">
   
@@ -160,56 +160,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JAVA面试宝典" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-redis配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JAVA面试宝典
+      redis配置
     </h1>
   
 
         
-        <a href="/2017/08/13/JAVA面试宝典/" class="archive-article-date">
-  	<time datetime="2017-08-13T08:01:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-13</time>
+        <a href="/2017/09/06/redis配置/" class="archive-article-date">
+  	<time datetime="2017-09-06T01:33:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-06</time>
 </a>
         
       </header>
     
     <!-- 目录内容 -->
     
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-      <span class="btn-bg"></span>
-      <span class="btn-text">文章导航</span>
-    </p>
-    <div id="toc-article" class="toc-article">
-      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-      <strong class="toc-title">文章目录</strong>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Java基础部分"><span class="toc-number">1.</span> <span class="toc-text">一、Java基础部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-一个“-java”源文件是否可以包括多个类（不是内部类）？有什么限制？"><span class="toc-number">1.1.</span> <span class="toc-text">1.一个“.java”源文件是否可以包括多个类（不是内部类）？有什么限制？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-java有没有goto"><span class="toc-number">1.2.</span> <span class="toc-text">2.java有没有goto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-amp-和-amp-amp-的区别"><span class="toc-number">1.3.</span> <span class="toc-text">3.&和&&的区别</span></a></li></ol></li></ol>
-    </div>
-    <script type="text/javascript">
-      function showToc(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:block");
-        show_toc_btn.setAttribute("style","display:none");
-      };
-      function showBtn(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:none");
-        show_toc_btn.setAttribute("style","display:block");
-      };
-    </script>
-    
     <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、Java基础部分"><a href="#一、Java基础部分" class="headerlink" title="一、Java基础部分"></a>一、Java基础部分</h2><h3 id="1-一个“-java”源文件是否可以包括多个类（不是内部类）？有什么限制？"><a href="#1-一个“-java”源文件是否可以包括多个类（不是内部类）？有什么限制？" class="headerlink" title="1.一个“.java”源文件是否可以包括多个类（不是内部类）？有什么限制？"></a>1.一个“.java”源文件是否可以包括多个类（不是内部类）？有什么限制？</h3><p>可以有多个Class,但是只能有一个public的类，并且public的类名必须与文件名相一致。</p>
-<h3 id="2-java有没有goto"><a href="#2-java有没有goto" class="headerlink" title="2.java有没有goto"></a>2.java有没有goto</h3><p>java 中的保留字</p>
-<h3 id="3-amp-和-amp-amp-的区别"><a href="#3-amp-和-amp-amp-的区别" class="headerlink" title="3.&amp;和&amp;&amp;的区别"></a>3.&amp;和&amp;&amp;的区别</h3>
+        <p>Redis 的配置文件位于 Redis 安装目录下，文件名为 redis.conf。<br>你可以通过 CONFIG 命令查看或设置配置项。<br>redis.conf 配置项说明如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">CONFIG GET *  //获取所有配置</div><div class="line">CONFIG GET loglevel  //获取制定配置</div><div class="line">CONFIG SET loglevel &quot;notice&quot;  //更改配置的值</div></pre></td></tr></table></figure>
+<p>当然，也可以直接到redis.conf文件中直接进行更改</p>
+<ol>
+<li>Redis默认不是以守护进程的方式运行，可以通过该配置项修改，使用yes启用守护进程<br> daemonize no</li>
+<li>当Redis以守护进程方式运行时，Redis默认会把pid写入/var/run/redis.pid文件，可以通过pidfile指定<br> pidfile /var/run/redis.pid</li>
+<li>指定Redis监听端口，默认端口为6379，作者在自己的一篇博文中解释了为什么选用6379作为默认端口，因为6379在手机按键上MERZ对应的号码，而MERZ取自意大利歌女Alessia Merz的名字<br> port 6379</li>
+<li>绑定的主机地址<br> bind 127.0.0.1<a id="more"></a>
+5.当 客户端闲置多长时间后关闭连接，如果指定为0，表示关闭该功能<br> timeout 300</li>
+<li>指定日志记录级别，Redis总共支持四个级别：debug、verbose、notice、warning，默认为verbose<br> loglevel verbose</li>
+<li>日志记录方式，默认为标准输出，如果配置Redis为守护进程方式运行，而这里又配置为日志记录方式为标准输出，则日志将会发送给/dev/null<br> logfile stdout</li>
+<li>设置数据库的数量，默认数据库为0，可以使用SELECT <dbid>命令在连接上指定数据库id<br> databases 16</dbid></li>
+<li><p>指定在多长时间内，有多少次更新操作，就将数据同步到数据文件，可以多个条件配合<br> save <seconds> <changes><br> Redis默认配置文件中提供了三个条件：<br> save 900 1<br> save 300 10<br> save 60 10000<br> 分别表示900秒（15分钟）内有1个更改，300秒（5分钟）内有10个更改以及60秒内有10000个更改。</changes></seconds></p>
+</li>
+<li><p>指定存储至本地数据库时是否压缩数据，默认为yes，Redis采用LZF压缩，如果为了节省CPU时间，可以关闭该选项，但会导致数据库文件变的巨大<br>rdbcompression yes</p>
+</li>
+<li>指定本地数据库文件名，默认值为dump.rdb<br>dbfilename dump.rdb</li>
+<li>指定本地数据库存放目录<br>dir ./</li>
+<li>设置当本机为slav服务时，设置master服务的IP地址及端口，在Redis启动时，它会自动从master进行数据同步<br>slaveof <masterip> <masterport></masterport></masterip></li>
+<li>当master服务设置了密码保护时，slav服务连接master的密码<br>masterauth <master-password></master-password></li>
+<li>设置Redis连接密码，如果配置了连接密码，客户端在连接Redis时需要通过AUTH <password>命令提供密码，默认关闭<br>requirepass foobared</password></li>
+<li>设置同一时间最大客户端连接数，默认无限制，Redis可以同时打开的客户端连接数为Redis进程可以打开的最大文件描述符数，如果设置 maxclients 0，表示不作限制。当客户端连接数到达限制时，Redis会关闭新的连接并向客户端返回max number of clients reached错误信息<br>maxclients 128</li>
+<li>指定Redis最大内存限制，Redis在启动时会把数据加载到内存中，达到最大内存后，Redis会先尝试清除已到期或即将到期的Key，当此方法处理 后，仍然到达最大内存设置，将无法再进行写入操作，但仍然可以进行读取操作。Redis新的vm机制，会把Key存放内存，Value会存放在swap区<br>maxmemory <bytes></bytes></li>
+<li>指定是否在每次更新操作后进行日志记录，Redis在默认情况下是异步的把数据写入磁盘，如果不开启，可能会在断电时导致一段时间内的数据丢失。因为 redis本身同步数据文件是按上面save条件来同步的，所以有的数据会在一段时间内只存在于内存中。默认为no<br>appendonly no</li>
+<li>指定更新日志文件名，默认为appendonly.aof<br> appendfilename appendonly.aof</li>
+<li><p>指定更新日志条件，共有3个可选值：<br>no：表示等操作系统进行数据缓存同步到磁盘（快）<br>always：表示每次更新操作后手动调用fsync()将数据写到磁盘（慢，安全）<br>everysec：表示每秒同步一次（折衷，默认值）<br>appendfsync everysec</p>
+</li>
+<li><p>指定是否启用虚拟内存机制，默认值为no，简单的介绍一下，VM机制将数据分页存放，由Redis将访问量较少的页即冷数据swap到磁盘上，访问多的页面由磁盘自动换出到内存中（在后面的文章我会仔细分析Redis的VM机制）<br> vm-enabled no</p>
+</li>
+<li>虚拟内存文件路径，默认值为/tmp/redis.swap，不可多个Redis实例共享<br> vm-swap-file /tmp/redis.swap</li>
+<li>将所有大于vm-max-memory的数据存入虚拟内存,无论vm-max-memory设置多小,所有索引数据都是内存存储的(Redis的索引数据 就是keys),也就是说,当vm-max-memory设置为0的时候,其实是所有value都存在于磁盘。默认值为0<br> vm-max-memory 0</li>
+<li>Redis swap文件分成了很多的page，一个对象可以保存在多个page上面，但一个page上不能被多个对象共享，vm-page-size是要根据存储的 数据大小来设定的，作者建议如果存储很多小对象，page大小最好设置为32或者64bytes；如果存储很大大对象，则可以使用更大的page，如果不 确定，就使用默认值<br> vm-page-size 32</li>
+<li>设置swap文件中的page数量，由于页表（一种表示页面空闲或使用的bitmap）是在放在内存中的，，在磁盘上每8个pages将消耗1byte的内存。<br> vm-pages 134217728</li>
+<li>设置访问swap文件的线程数,最好不要超过机器的核数,如果设置为0,那么所有对swap文件的操作都是串行的，可能会造成比较长时间的延迟。默认值为4<br> vm-max-threads 4</li>
+<li>设置在向客户端应答时，是否把较小的包合并为一个包发送，默认为开启<br>glueoutputbuf yes</li>
+<li>指定在超过一定的数量或者最大的元素超过某一临界值时，采用一种特殊的哈希算法<br>hash-max-zipmap-entries 64<br>hash-max-zipmap-value 512</li>
+<li>指定是否激活重置哈希，默认为开启（后面在介绍Redis的哈希算法时具体介绍）<br>activerehashing yes</li>
+<li>指定包含其它的配置文件，可以在同一主机上多个Redis实例之间使用同一份配置文件，而同时各个实例又拥有自己的特定配置文件</li>
+</ol>
+
       
 
       
@@ -253,7 +266,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
         		</li>
       		
 		</ul>
@@ -309,7 +322,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/13/JAVA面试宝典/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/06/redis配置/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -323,18 +336,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/24/单例模式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          单例模式
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/30/SpringBoot配置文件详解/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SpringBoot配置文件详解</div>
+    <a href="/2017/08/27/工厂模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">工厂模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -354,19 +358,6 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Java基础部分"><span class="toc-number">1.</span> <span class="toc-text">一、Java基础部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-一个“-java”源文件是否可以包括多个类（不是内部类）？有什么限制？"><span class="toc-number">1.1.</span> <span class="toc-text">1.一个“.java”源文件是否可以包括多个类（不是内部类）？有什么限制？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-java有没有goto"><span class="toc-number">1.2.</span> <span class="toc-text">2.java有没有goto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-amp-和-amp-amp-的区别"><span class="toc-number">1.3.</span> <span class="toc-text">3.&和&&的区别</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -377,7 +368,7 @@
   
 
   
-  <div id="SOHUCS" sid="JAVA面试宝典" ></div> 
+  <div id="SOHUCS" sid="redis配置" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = "cyt7fRDGE"; 
